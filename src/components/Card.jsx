@@ -16,7 +16,7 @@ const Card = ({ name, email, id }) => {
       onClick={() => (location.pathname === '/' ? navigate(`/${name}`) : null)}
       className='bg-light-green dib br3 pa3 ma2 grow bw2 shadow-5'
     >
-      <img alt='robots' src={`https://robohash.org/${id}test?200x200`} />
+      <img alt='robots' src={`https://robohash.org/${id}test?size=200x200`} />
       <div>
         <h2>{name}</h2>
         <p>{email}</p>

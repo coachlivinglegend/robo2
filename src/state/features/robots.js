@@ -8,7 +8,6 @@ export const fetchRobots = createAsyncThunk('robots/fetchRobots', async () =>
 // with async await
 // export const fetchRobots = createAsyncThunk('robots/fetchRobots', async () => {
 //   const response = await fetch('https://jsonplaceholder.typicode.com/users')
-//   console.log(response)
 //   return await response.json();
 // })
 

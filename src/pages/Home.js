@@ -8,8 +8,6 @@ import { useSelector } from 'react-redux';
 import Header from '../components/Header';
 
 const Home = ({ filteredRobots }) => {
-  console.log('Home');
-
   return (
     <Routes>
       <Route
@@ -37,17 +35,14 @@ const ACard = () => {
   const params = useParams();
   const navigate = useNavigate();
   const robots = useSelector((state) => state.robots.value);
-  const robot = robots.filter((robot) => robot.name === params.id)[0];
-  console.log({ robots, robot });
-
-  if (robot === undefined) {
-    return <h1>Omo</h1>;
-  }
+  const { name, email, id } = robots.filter(
+    (robot) => robot.name === params.id
+  )[0];
 
   return (
     <>
       <div>{params.id}</div>
-      <Card name={robot.name} email={robot.email} id={robot.id} />
+      <Card name={name} email={email} id={id} />
       <div onClick={() => navigate(-1)}>Go back.</div>
     </>
   );

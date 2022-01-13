@@ -3,8 +3,6 @@ import { setSearchField } from '../state/features/searchField';
 import { useDispatch, useSelector } from 'react-redux';
 
 const SearchBox = () => {
-  console.log('Searchbox');
-
   const searchFieldRedux = useSelector((state) => state.searchField.value);
 
   const dispatch = useDispatch();
