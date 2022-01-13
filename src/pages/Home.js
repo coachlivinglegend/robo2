@@ -37,9 +37,12 @@ const ACard = () => {
   const params = useParams();
   const navigate = useNavigate();
   const robots = useSelector((state) => state.robots.value);
-  const robot = robots.filter(
-    (robot) => robot.name === params.id
-  )[0];
+  const robot = robots.filter((robot) => robot.name === params.id)[0];
+  console.log({ robot });
+
+  if (robot === undefined) {
+    return <h1>Omo</h1>;
+  }
 
   return (
     <>
