@@ -37,14 +37,14 @@ const ACard = () => {
   const params = useParams();
   const navigate = useNavigate();
   const robots = useSelector((state) => state.robots.value);
-  const { name, email, id } = robots.filter(
+  const robot = robots.filter(
     (robot) => robot.name === params.id
   )[0];
 
   return (
     <>
       <div>{params.id}</div>
-      <Card name={name} email={email} id={id} />
+      <Card name={robot.name} email={robot.email} id={robot.id} />
       <div onClick={() => navigate(-1)}>Go back.</div>
     </>
   );
