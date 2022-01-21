@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://coachlivinglegend.github.io/robo2",
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.1",
     "@testing-library/jest-dom": "^5.16.1",
@@ -37,6 +42,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "test-coverage": "react-scripts test --env=jsdom --watchAll=false --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -56,5 +62,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
+    "redux-mock-store": "^1.5.4"
   }
 }

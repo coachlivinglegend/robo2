@@ -24,18 +24,27 @@ export const robotsSlice = createSlice({
   // },
   extraReducers: {
     [fetchRobots.pending]: (state, action) => {
-      state.status = 'loading';
+      return {
+        ...state,
+        status: 'loading',
+      };
     },
     [fetchRobots.fulfilled]: (state, { payload }) => {
-      state.status = 'success';
-      state.value = payload;
+      return {
+        ...state,
+        status: 'success',
+        value: payload,
+      };
     },
-    [fetchRobots.rejec]: (state, action) => {
-      state.status = 'failed';
+    [fetchRobots.rejected]: (state, action) => {
+      return {
+        ...state,
+        status: 'failed',
+      };
     },
   },
 });
 
-export const { setRobots } = robotsSlice.actions;
+export const robotSliceActions = robotsSlice.actions;
 
 export default robotsSlice.reducer;

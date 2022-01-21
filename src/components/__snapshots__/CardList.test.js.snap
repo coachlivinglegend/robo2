@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`expect to take a snapshot 1`] = `
+<div>
+  <Card
+    email="sssskkkkkkkkkrrrrrrrrr@io"
+    id={0}
+    key="0"
+    name="John Doe"
+  />
+  <Card
+    email="sssskkkkkkkkkrrrrrrrrr@io"
+    id={1}
+    key="1"
+    name="John Doe"
+  />
+</div>
+`;
